@@ -1,0 +1,68 @@
+PRUEBA BASE:
+run pruebas/base/simple_ec.lql
+
+run pruebas/base/simple_sc.lql
+
+run pruebas/base/simple_shc.lql
+
+PRUEBA KERNEL:
+run pruebas/kernel/animales.lql
+run pruebas/kernel/comidas.lql
+run pruebas/kernel/internet_browser_falla.lql
+
+run pruebas/kernel/misc_1.lql
+run pruebas/kernel/misc_2.lql
+run pruebas/kernel/cosas_falla.lql
+
+INSERT POSTRES 63 "Flan"
+INSERT COLORES 326 "Gris"
+SELECT COSAS 332
+SELECT SERIES 89
+
+
+PRUEBA LFS:
+run pruebas/lfs/compactacion_larga.lql
+
+en lfs
+SELECT METALS 198
+SELECT METALS 135 
+SELECT ANIMALS 110
+
+en kernel
+DESCRIBE
+SELECT METALS 198
+SELECT METALS 135 
+SELECT ANIMALS 110
+
+
+
+PRUEBA MEMORIA:
+run pruebas/memoria/reemplazo1.lql
+
+en memoria
+JOURNAL
+
+en lfs
+INSERT POSTRES 819 “Alfajor”
+INSERT POSTRES 178 “Mousse”
+
+run pruebas/memoria/reemplazo2.lql
+
+en lfs
+SELECT POSTRES 100
+SELECT POSTRES 101
+SELECT POSTRES 1888
+SELECT POSTRES 80
+SELECT POSTRES 120
+SELECT POSTRES 999
+
+
+PRUEBA STRESS:
+run pruebas/stress/cities_countries.lql
+run pruebas/stress/games_computer.lql
+run pruebas/stress/internet_browser_falle.lql
+
+run pruebas/stress/library_study.lql
+run pruebas/stress/nintendo_playstation.lql
+run pruebas/stress/cosas_falla.lql
+
